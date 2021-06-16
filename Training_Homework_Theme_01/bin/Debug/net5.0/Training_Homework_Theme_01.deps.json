@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Training_Homework_Theme_01/1.0.0": {
+        "runtime": {
+          "Training_Homework_Theme_01.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Training_Homework_Theme_01/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,12 +1,72 @@
 ﻿using System;
 
-namespace Training_Homework_Theme_01
+namespace Homework_Theme_01
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            /*
+            Заказчик просит написать программу «Записная книжка». Оплата фиксированная - $ 120.
+
+             В данной программе, должна быть возможность изменения значений нескольких переменных для того,
+             чтобы персонифецировать вывод данных, под конкретного пользователя.
+
+             Для этого нужно:
+            1.Создать несколько переменных разных типов, в которых могут храниться данные
+             -имя;
+            -возраст;
+            -рост;
+            -баллы по трем предметам: история, математика, русский язык;
+
+            2.Реализовать в системе автоматический подсчёт среднего балла по трем предметам, 
+                указанным в пункте 1.
+
+             3.Реализовать возможность печатки информации на консоли при помощи
+               - обычного вывода;
+            -форматированного вывода;
+            -использования интерполяции строк;
+
+            4.Весь код должен быть откомментирован с использованием обычных и хml - комментариев
+
+           * *
+           5.В качестве бонусной части, за дополнительную оплату $50, заказчик просит реализовать
+             возможность вывода данных в центре консоли.
+            */
+
+            //задание 1
+            //переменная строковая для имени
+            string name = Console.ReadLine();
+            //целочисленная переменная для возраста
+            sbyte age = Convert.ToSByte(Console.ReadLine());
+            //целочисленная переменная для роста
+            int height = Convert.ToInt32(Console.ReadLine());
+            //балл по истории
+            float history = Convert.ToSingle(Console.ReadLine());
+            //балл по математике
+            float math = Convert.ToSingle(Console.ReadLine());
+            //балл по русскому
+            float russ = Convert.ToSingle(Console.ReadLine());
+            //автоматический подсчёт среднего балла по трем предметам
+            float averageScore = (history + math + russ) / 3;
+            //Вывод среднего балла
+            Console.WriteLine(averageScore);
+            int _left = Console.CursorLeft;
+            int _top = Console.CursorTop;
+            Console.SetCursorPosition((Console.WindowWidth / 2), Console.WindowHeight / 2);
+            Console.SetCursorPosition(_left, _top);
+            ///обычный вывод
+            Console.WriteLine("Имя: " + name + " " + "Возраст: " + age + " " + "Рост: " + height + " " + "Балл по истории: " + history + " " + "Балл по математике: "
+                + math + " " + "Балл по русскому: " + russ + " " + "Средний балл по трем дисциплинам: " + averageScore);
+
+            //форматированный вывод
+            Console.WriteLine("Имя: {0} Возраст: {1} Рост: {2} Балл по истории: {3} Балл по математике: {4} Балл по русскому: {5} Средний балл по трем дисциплинам: {6}",
+                 name, age, height, history, math, russ, averageScore);
+
+            //Интерпалированный вывод
+            Console.WriteLine($"Имя: {name} \nВозраст: {age} \nРост: {height} \nБалл по истории: {history} \nБалл по математике: {math} \nБалл по русскому: {russ} " +
+                $"\nСредний балл по трем дисциплинам: {averageScore}");
+            Console.Read();
         }
     }
 }
